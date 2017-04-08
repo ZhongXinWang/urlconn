@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ok_http_get_web_source"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="wzx.app.com.urlconn.OkHttpGetWebSourceActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <EditText
+          android:id="@+id/test_url"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/default_url"
+          android:hint="@string/default_hit_url"
+          />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:id="@+id/submit"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/get_content"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            />
+    </LinearLayout>
+
+
+
+</ScrollView>
