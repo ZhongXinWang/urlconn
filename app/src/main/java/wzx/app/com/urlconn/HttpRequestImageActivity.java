@@ -1,6 +1,5 @@
 package wzx.app.com.urlconn;
 
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -10,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -67,8 +68,13 @@ public class HttpRequestImageActivity extends BaseActivity {
                             public void run() {
                                 if(bytes != null){
 
-                                    mImage.setImageBitmap(BitmapFactory.decodeByteArray(bytes,0,bytes.length));
+                                    //直接加载一个url
+                                    //Glide.with(HttpRequestImageActivity.this).load(url).into(mImage);
+                                    //通过字节数组加载
+                                    Glide.with(HttpRequestImageActivity.this).load(bytes).into(mImage);
+                                   // mImage.setImageBitmap(BitmapFactory.decodeByteArray(bytes,0,bytes.length));
                                     mName.setText(name);
+                                    //使用glide加载图片
                                     hideProgress();
                                 }
 
