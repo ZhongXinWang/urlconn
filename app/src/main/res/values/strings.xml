@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">urlconn</string>
-    <string name="default_url">http://www.baidu.com</string>
+    <string name="default_url">https://www.baidu.com</string>
     <string name="submit">获取</string>
     <string name="default_hit_url">请输入网址</string>
+    <string name="weather_title">天气预报</string>
 </resources>

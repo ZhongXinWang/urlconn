@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="wzx.app.com.urlconn">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,7 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".OkHttpGetWebSourceActivity"></activity>
+        <activity android:name=".OkHttpGetWebSourceActivity" />
+        <activity android:name=".HttpConnectionGetWebSourceActivity" />
+        <activity android:name=".HttpRequestImageActivity"></activity>
     </application>
 
 </manifest>

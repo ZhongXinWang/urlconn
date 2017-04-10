@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_http_request_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context="wzx.app.com.urlconn.HttpRequestImageActivity">
+
+    <include layout="@layout/head_layout"/>
+    <Spinner
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/select_weather_id"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:popupBackground="@color/colorWhite"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <ImageView
+            android:id="@+id/weather_image"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:id="@+id/weather_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:textSize="@dimen/title_size"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            />
+    </LinearLayout>
+</LinearLayout>

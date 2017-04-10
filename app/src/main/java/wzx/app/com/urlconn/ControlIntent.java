@@ -32,7 +32,6 @@ public class ControlIntent {
     public void startAction(){
 
         getContext().startActivity(getIntent());
-
     }
 
     public String toString(){

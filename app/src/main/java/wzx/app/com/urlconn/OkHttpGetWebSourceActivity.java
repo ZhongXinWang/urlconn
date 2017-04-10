@@ -1,8 +1,6 @@
 package wzx.app.com.urlconn;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -16,11 +14,10 @@ import okhttp3.Response;
 import wzx.app.com.urlconn.util.HttpUtil;
 
 /*使用okhttp从获取百度界面*/
-public class OkHttpGetWebSourceActivity extends AppCompatActivity {
+public class OkHttpGetWebSourceActivity extends BaseActivity {
 
     private EditText mtext;
     private TextView mTextView;
-    ProgressDialog progressDialog= null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,10 +32,7 @@ public class OkHttpGetWebSourceActivity extends AppCompatActivity {
                 //开始加载数据进度条
                 ShowPregress();
                 //开启线程，获取数据
-
                 startConnect();
-
-
             }
 
 
@@ -94,17 +88,5 @@ public class OkHttpGetWebSourceActivity extends AppCompatActivity {
                             });
                         }
                     });
-    }
-    private void ShowPregress(){
-
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("加载数据");
-        progressDialog.setMessage("Loading....");
-        progressDialog.setCancelable(false);
-        progressDialog.show();
-    }
-    private void hideProgress(){
-
-        progressDialog.dismiss();
     }
 }

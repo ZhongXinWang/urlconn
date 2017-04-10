@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         mRecycle_List = (RecyclerView) findViewById(R.id.recycle_list);
         initData();
         LinearLayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
-
         mRecycle_List.setAdapter(new MyRecycleViewAdapter());
         mRecycle_List.setLayoutManager(layoutManager);
 
@@ -33,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         mList = new ArrayList<>();
         mList.add(new ControlIntent(MainActivity.this,new Intent(MainActivity.this,OkHttpGetWebSourceActivity.class),"使用OkHttp获取整个网页"));
+        mList.add(new ControlIntent(MainActivity.this,new Intent(MainActivity.this,HttpConnectionGetWebSourceActivity.class),"使用HttpURLConnection获取整个网页"));
+        mList.add(new ControlIntent(MainActivity.this,new Intent(MainActivity.this,HttpRequestImageActivity.class),"从网络上获取图片"));
     }
     private class ViewHodler extends RecyclerView.ViewHolder{
 
